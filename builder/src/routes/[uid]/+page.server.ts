@@ -15,6 +15,6 @@ export async function load({ params }) {
   const page = await client.getByUID("page", params.uid)
 
   return {
-    page,
+    slices: page.data.slices,
   }
 }
